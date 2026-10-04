@@ -1,0 +1,95 @@
+{
+  "data_load_time_seconds": 2.9249734489999355,
+  "training_time_seconds": 3.0738558570000123,
+  "best_iteration": 2,
+  "auc_roc": 0.9408567380244164,
+  "accuracy": 0.9898353288157017,
+  "f1_score": 0.23311258278145697,
+  "precision": 0.1339421613394216,
+  "recall": 0.8979591836734694,
+  "inference_latency_1_row_ms": 1.3448032599887938,
+  "inference_throughput_1000_rows_per_second": 586524.7120440386,
+  "inference_details": {
+    "method": "predict_proba on pandas DataFrames; 5 warmups; perf_counter wall time",
+    "latency_repeats": 100,
+    "latency_median_ms": 1.2807145000124365,
+    "latency_p95_ms": 1.732948749929619,
+    "batch_rows": 1000,
+    "throughput_repeats": 20,
+    "batch_mean_time_seconds": 0.0017049580000048081
+  },
+  "dataset": {
+    "path": "/home/quangminh141005_gmail_com/ml-benchmark/creditcard.csv",
+    "rows": 284807,
+    "features": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount"
+    ],
+    "fraud_rows": 492,
+    "split_rows": {
+      "train": 170883,
+      "validation": 56962,
+      "test": 56962
+    },
+    "split_fraud_rows": {
+      "train": 295,
+      "validation": 99,
+      "test": 98
+    }
+  },
+  "run": {
+    "completed_at_utc": "2026-10-04T02:28:05.613715+00:00",
+    "seed": 42,
+    "decision_threshold": 0.5,
+    "early_stopping_rounds": 50,
+    "model_parameters": {
+      "objective": "binary",
+      "n_estimators": 1000,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "n_jobs": 2,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+    "cpu_count": 2,
+    "python_version": "3.11.2",
+    "versions": {
+      "lightgbm": "4.7.0",
+      "scikit_learn": "1.9.1",
+      "pandas": "3.0.6",
+      "numpy": "2.4.6"
+    }
+  }
+}
